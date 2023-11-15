@@ -4,3 +4,12 @@ body,
 #app {
   height: 100vh;
 }
+
+@font-face {
+  font-family: 'suxian';
+  src: url('/font/suxian.ttf') format('truetype');
+}
+
+.font-suxian {
+  font-family: 'suxian', Arial, sans-serif;
+}
