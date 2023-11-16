@@ -22,7 +22,7 @@ import { ref } from 'vue';
   width: 100%;
   height: 100%;
   /* background-color: red; */
-  background-image: url(/image/classBg.png);
+  background-image: url(/image/aboutBg.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

@@ -10,23 +10,23 @@ const options = ref([
   }, {
     back: "群山",
     front: "共鸣",
-    route: "/class"
+    route: "/echo"
   }, {
     back: "雪融",
     front: "社区",
-    route: "/class"
+    route: "/community"
   }, {
     back: "小流",
     front: "信箱",
-    route: "/class"
+    route: "/message"
   }, {
     back: "成为",
     front: "萌芽",
-    route: "/class"
+    route: "/bud"
   }, {
     back: "关于",
     front: "新雨",
-    route: "/class"
+    route: "/about"
   }
 ])
 </script>
@@ -55,6 +55,7 @@ const options = ref([
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  min-width: 1000px;
 }
 
 .logo {
@@ -76,7 +77,6 @@ const options = ref([
 }
 
 .options {
-  gap: 60px;
   display: flex;
   justify-content: space-between;
   align-items: center;

@@ -4,6 +4,7 @@ import { ref } from 'vue';
 </script>
 
 <template>
+  <img src="/image/messageBg.png" class="all-bg" />
   <div class="class font-suxian">
     <div class="title">
       水滴课堂
@@ -22,14 +23,21 @@ import { ref } from 'vue';
   width: 100%;
   height: 100%;
   /* background-color: red; */
-  background-image: url(/image/classBg.png);
-  background-position: center;
+  /* background-image: url(/image/communityBg.png); */
+  background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.all-bg {
+  height: 100vh;
+  position: fixed;
+  right: 0;
+  z-index: -1;
 }
 
 .title {
