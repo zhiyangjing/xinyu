@@ -1,65 +1,94 @@
 <script setup lang="ts">
 import { ref } from 'vue';
+import { useLocalStorage } from '@vueuse/core';
 
+import router from '@/router'
+const go_home = ()=>{
+  router.push("/")
+}
+
+function handleKeyDown(event: KeyboardEvent) {
+  console.log(event)
+  if (event.code == 'ArrowRight' || event.code == "ArrowUp") {
+
+  }
+  if (event.code == 'ArrowLeft' || event.code == "ArrowDown") {
+
+  }
+}
+
+window.addEventListener('keydown', handleKeyDown)
 </script>
 
 <template>
-  <div class="class font-suxian">
-    <div class="title">
-      水滴课堂
+  <div class="main font-suxian">
+    <div class="main bkg1 base bg2">
+      <div class="title">
+        关于新雨
+      </div>
+      <div class="text">
+        我们来自于西安交通大学，是无数大学生中最平凡不过的几个。
+        <br/> 我们想要为女孩子们做些什么，我们希望她们能平安快乐地走向自己的人生。
+        <br/> 我们是刚刚降临的雨，虽然微小，但拥有无限力量。
+      </div>
     </div>
-    <div class="subtitle">
-      以月经为例:
-    </div>
-    <div class="text">
-      月经是生育期妇女重要的生理现象，月经的出现给女性的生活带来了一定的烦恼，但它却有着监测女性身体健康的重要作用，今天带大家一起了解关于月经的科普知识。
+
+    <div class="pages">Page：1/1</div>
+    <div class="buttons">
+      <el-button round @click="go_home()">返回</el-button>
     </div>
   </div>
 </template>
 
 <style scoped>
-.class {
-  width: 100%;
-  height: 100%;
-  /* background-color: red; */
+@import url("@/assets/custom.css");
+
+.bkg1 {
   background-image: url(/image/aboutBg.png);
-  background-position: center;
+  z-index: 3;
+}
+
+.main {
+  width: 100vw;
+  height: 100%;
+  background-position: right;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 1;
 }
 
-.title {
-  font-size: 30px;
-  text-decoration: underline;
-  text-underline-offset: 7px;
-  text-decoration-thickness: 1px;
-  top: 150px;
-  left: 150px;
+.all-bg {
+  width: 100vw;
+  position: fixed;
+  bottom: 0;
+  z-index: 1;
+}
+
+
+.base::after {
+  content: "";
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
   position: absolute;
+  top: 50vh;
+  bottom: 10vh;
+  z-index: 1;
 }
 
-.subtitle {
-  font-size: 25px;
-  top: 280px;
-  left: 220px;
-  position: absolute;
+
+.bg2::after {
+  /* background-image: url(/image/messageBg.png); */
+  background-position: bottom;
+  top: 0vh;
+  bottom: 0vh;
+  left: 40vw;
+  right: 0vw;
+  z-index: -1;
 }
 
-.text {
-  width: 50%;
-  font-size: 19px;
-  /* background-color: red; */
-}
-
-@media (min-width: 1024px) {
-  .about {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-  }
-}
 </style>

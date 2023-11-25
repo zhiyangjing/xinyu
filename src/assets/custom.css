@@ -1,0 +1,55 @@
+.pages {
+  position:absolute;
+  right:4vw;
+  bottom:5vh;
+  z-index: 10;
+  font-weight: 900;
+  font-size: larger;
+  color:black
+}
+
+.all-bg {
+  height: 100vh;
+  position: fixed;
+  right: 0;
+  z-index: -1;
+}
+
+.title {
+  font-size: 60px;
+  text-decoration: underline;
+  text-underline-offset: 20px;
+  text-decoration-thickness: 3px;
+  top: 70px;
+  left: 100px;
+  position: absolute;
+}
+
+.subtitle {
+  font-size: 35px;
+  top: 22vh;
+  left: 220px;
+  position: absolute;
+}
+
+.text {
+  width: 60%;
+  font-size: 30px;
+  top: 33vh;
+  position: absolute;
+}
+
+@media (min-width: 1024px) {
+  .about {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.buttons {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  z-index:5;
+}

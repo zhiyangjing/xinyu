@@ -1,7 +1,9 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import router from '@/router';
-
+const go_home = ()=>{
+  router.push("/")
+}
 const options = ref([
   {
     back: "水滴",

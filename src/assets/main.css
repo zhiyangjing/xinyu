@@ -1,6 +1,13 @@
 @import './base.css';
 
-body,
+body {
+  margin:0;
+  min-width:1224px;
+}
+
+.main {
+  min-width: 1224px;
+}
 #app {
   height: 100vh;
 }
