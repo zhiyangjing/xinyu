@@ -161,7 +161,7 @@ window.addEventListener('keydown', handleKeyDown)
         </div>
         <div class="iframe-wrapper">
           <iframe class="iframe-part"
-            src="https://v.eqxiu.cn/s/jndwN32L?bt=yxy&eip=true&share_level=3&from_user=2023121221b92f56&from_id=e77de911-e&share_time=1702384283246"></iframe>
+            src="https://v.eqxiu.cn/s/jndwN32L"></iframe>
         </div>
         <!-- <div style="font-size: 30px !important;text-align: right;">
         </div> -->
@@ -196,7 +196,8 @@ window.addEventListener('keydown', handleKeyDown)
 .iframe-part {
   width:320px;
   height:486px;
-  /* height:initial; */
+  /* width:100vw;
+  height:100vh; */
 }
 
 .main {
