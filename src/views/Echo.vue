@@ -6,7 +6,7 @@ import router from '@/router'
 const initialPos = ref(1);
 const pos = useLocalStorage('echo_pos', initialPos)
 
-const total = 7;
+const total = 8;
 function handleKeyDown(event: KeyboardEvent) {
   console.log(event)
   if (event.code == 'ArrowRight' || event.code == "ArrowUp") {
@@ -33,7 +33,7 @@ const last = () => {
   }
 }
 
-const go_home = ()=>{
+const go_home = () => {
   router.push("/")
 }
 
@@ -151,6 +151,25 @@ window.addEventListener('keydown', handleKeyDown)
       </div>
     </div>
 
+    <div class="main bkg1 base" v-if="pos == 8">
+      <div class="title">
+        群山共鸣
+      </div>
+      <div id="fundation">
+        <div style="font-size: 50px;">
+          数说她：原创多媒栏目
+        </div>
+        <div class="iframe-wrapper">
+          <iframe class="iframe-part"
+            src="https://v.eqxiu.cn/s/jndwN32L?bt=yxy&eip=true&share_level=3&from_user=2023121221b92f56&from_id=e77de911-e&share_time=1702384283246"></iframe>
+        </div>
+        <!-- <div style="font-size: 30px !important;text-align: right;">
+        </div> -->
+      </div>
+      <div class="text">
+      </div>
+    </div>
+
     <div class="pages">Page：{{ pos }}/{{ total }}</div>
     <div class="buttons">
       <el-button round @click="go_home()">返回</el-button>
@@ -163,6 +182,22 @@ window.addEventListener('keydown', handleKeyDown)
 
 <style scoped>
 @import url("@/assets/custom.css");
+.iframe-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top:40px;
+  width:initial;
+  height: initial;
+  /* border:solid 1px red; */
+}
+
+.iframe-part {
+  width:320px;
+  height:486px;
+  /* height:initial; */
+}
 
 .main {
   width: 100vw;
