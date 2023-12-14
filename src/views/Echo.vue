@@ -155,8 +155,9 @@ window.addEventListener('keydown', handleKeyDown)
       <div class="title">
         群山共鸣
       </div>
-      <div id="fundation">
-        <div style="font-size: 50px;">
+      <div class="program">
+      <!-- <div id="fundation"> -->
+        <div style="font-size: 30px;">
           数说她：原创多媒栏目
         </div>
         <div class="iframe-wrapper">
@@ -173,8 +174,8 @@ window.addEventListener('keydown', handleKeyDown)
     <div class="pages">Page：{{ pos }}/{{ total }}</div>
     <div class="buttons">
       <el-button round @click="go_home()">返回</el-button>
-      <el-button round @click="next()">下一页</el-button>
       <el-button round @click="last()">上一页</el-button>
+      <el-button round @click="next()">下一页</el-button>
     </div>
   </div>
 </template>
@@ -182,6 +183,10 @@ window.addEventListener('keydown', handleKeyDown)
 
 <style scoped>
 @import url("@/assets/custom.css");
+
+.program {
+  /* border:solid 1px red; */
+}
 .iframe-wrapper {
   display: flex;
   flex-direction: column;

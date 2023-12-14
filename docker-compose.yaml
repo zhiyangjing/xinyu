@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  xinyufront:
+    container_name: xinyu_front
+    image: nginx
+    restart: unless-stopped
+    volumes:
+      - ./dist:/usr/share/nginx/html
+      - ./nginx/:/etc/nginx/conf.d
+    ports:
+      - "8086:80"
